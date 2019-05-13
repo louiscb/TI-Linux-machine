@@ -1,0 +1,93 @@
+/dts-v1/;
+	/plugin/;
+	/ {
+		compatible = "brcm,bcm2835", "brcm,bcm2708", "brcm,bcm2709";
+
+		fragment@0 {
+			target-path = "/";
+			__overlay__ {
+				keypad: CALCULATOR_KEYBOARD {
+					compatible = "gpio-matrix-keypad";
+					pinctrl-names = "default";
+					pinctrl-0 = <&keypad_pins>;
+					debounce-delay-ms = <10>;
+	                   		col-scan-delay-us = <10>;
+					wakeup-source = <1>;
+	
+					row-gpios = <&gpio 13 0 // calc 13 
+						     &gpio 16 0 // calc 14   
+	                                	     &gpio 20 0 // calc 15  
+	                                 	     &gpio 19 0 // calc 16
+						     &gpio 21 0 // calc 17   
+	                                	     &gpio 26 0 >; // calc 18 
+					
+					col-gpios = <&gpio 17 0 // calc 5
+                                                     &gpio 18 0 // calc 6
+						     &gpio 27 0 // calc 7
+						     &gpio 22 0 // calc 8
+						     &gpio 23 0 // calc 9
+                                                     &gpio 5 0 // calc 10
+						     &gpio 6 0 // calc 11
+						     &gpio 12 0 >; // calc 12
+	
+					linux,keymap = <//first row
+							0x00000010 // letter a 
+                                    			0x0100000B // number 0
+                                    			0x02000034 // full stop
+							0x03000035 // forward slash
+							0x0400001C // enter
+							//second row
+                                    			0x0001002D // letter x
+                                    			0x01010002 // number 1
+                                    		 	0x02010003 // number 2
+							0x03010004 // number 3
+							0x0401000F // tab
+							//third row
+                                    			0x00020011 // letter w 
+                                    			0x01020005 // number 4
+                                    			0x02020006 // number 5
+							0x03020007 // number 6
+							0x0402004E // + symbol
+							//fourth row
+                                    			0x00030012 // letter E 
+                                    			0x01030008 // number 7
+                                    			0x02030009 // number 8
+							0x0303000A // number 9
+							0x0403000C // minus 
+							//fifth row
+                                    			0x01040014 // letter T
+                                    			0x020400B3 // open bracket
+							0x030400B4 // closed bracket
+							0x04040037 // asterisk
+							//sixth row
+							0x00050015 // letter Y 
+                                    			0x01050016 // letter u
+                                    			0x02050017 // letter i
+							0x03050018 // letter o
+							0x04050019 // letter p 
+							//seventh row
+							0x0006001E // letter a  
+                                    			0x0106001F // letter s
+                                    			0x02060020 // letter d
+							0x03060021 // letter f
+							0x04060022 // letter g
+							// arrow keys
+							0x0504006C
+							0x0505006A
+							0x05060069
+							0x05070067>;
+					};
+				};
+		};
+		
+		fragment@1 {
+			target = <&gpio>;
+			__overlay__ {
+				keypad_pins: keypad_pins {
+					brcm,pins = < 16 17 18 19 20 22 27 >;
+					brcm,function = <0>;
+					brcm,pull = <1>;
+				};
+			};
+		};
+	};
