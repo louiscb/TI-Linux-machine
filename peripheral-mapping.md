@@ -20,17 +20,18 @@ CalcX means the wire number on the wires coming out of the calculator keyboard.
 Going from 1 to 18 looking from the backside of the calculator.
 
 ```
-GPIO17 - calc5
-GPIO4 - calc6
-GPIO27 - calc7
-GPIO22 - calc8
-GPIO23 - calc9
-GPIO5 - calc10
-GPIO6 - calc11
-GPIO12 - calc12
-GPIO13 - calc13
-GPIO16 - calc14
-GPIO20 - calc15
-GPIO19 - calc16
-GPIO26 - calc18
+GPIO2 - calc5
+GPIO3 - calc6
+GPIO4 - calc7
+GPIO17 - calc8
+GPIO27 - calc9
+GPIO22 - calc10
+GPIO25 - calc11
+GPIO7 - calc12
+GPIO5 - calc13
+GPIO12 - calc14
+GPIO6 - calc15
+GPIO13 - calc16
+GPIO16 - calc17
+GPIO19 - calc18
 ```
