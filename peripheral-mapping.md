@@ -5,22 +5,22 @@
 Based off of [this](https://github.com/notro/fbtft/wiki/LCD-Modules#itdb02-28) mapping.
 
 ```
-3.3v:VCC
-3.3v:RD
-GND:GND
-GPIO17:RST
-GPIO3:RS
-GPIO2:wr
-GPIO27:cs
-GPIO9:db08
-GPIO11:db09
-GPIO18:db10
-GPIO23:db11
-GPIO24:db12
-GPIO25:db13
-GPIO8:db14
-GPIO7:db15
-GPIO4:led
+3.3v - VCC
+3.3v - RD
+GND - GND
+GPIO17 - RST
+GPIO3 - RS
+GPIO2 - wr
+GPIO27 - cs
+GPIO9 - db08
+GPIO11 - db09
+GPIO18 - db10
+GPIO23 - db11
+GPIO24 - db12
+GPIO25 - db13
+GPIO8 - db14
+GPIO7 - db15
+GPIO4 - led
 ```
 
 ## Keyboard mapping
