@@ -9,11 +9,13 @@ Run `autodts.sh` and reboot the computer.
 
 ## Screen
 
-Create file /etc/modprobe.d/fbtft.conf `options fbtft_device custom rotate=90
-bgr=1 buswidth=8 width=240 height=320 name=fb_ili9325
-gpios=reset:17,dc:3,wr:2,cs:27,db00:9,db01:11,db02:18,db03:23,db04:24,db05:25,db06:8,db07:7,led:4`
+Create file /etc/modprobe.d/fbtft.conf and add this
 
-Add to /etc/modules: `spi-bcm2835` and `fbtft_device`
+```
+options fbtft_device name=fb_ili9325 custom rotate=90 bgr=1 width=240 height=320 gpios=reset:7,dc:0,wr:1,cs:8,db00:17,db01:18,db02:21,db03:22,db04:23,db05:24,db06:25,db07:4,led:12
+```
+
+Add to /etc/modules: `fbtft_device`
 
 Add to /boot/cmdline.txt `fbcon=map:10 fbcon=font:VGA8x8`
 
