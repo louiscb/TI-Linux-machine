@@ -16,21 +16,21 @@
 	                col-scan-delay-us = <10>;
 					wakeup-source = <1>;
 	
-					row-gpios =	<&gpio 5 0 // calc 13 
-							&gpio 12 0 // calc 14   
-	                            			&gpio 6 0 // calc 15  
-	                            			&gpio 13 0 // calc 16
-							&gpio 16 0 // calc 17   
-	                            			&gpio 19 0 >; // calc 18 
+					row-gpios =	<&gpio 19 0 // calc 13 
+							&gpio 16 0 // calc 14   
+	                            			&gpio 27 0 // calc 15  
+	                            			&gpio 26 0 // calc 16
+							&gpio 3 0 // calc 17   
+	                            			&gpio 2 0 >; // calc 18 
 					
-					col-gpios = <&gpio 2 0 // calc 5
-								&gpio 3 0 // calc 6
-								&gpio 4 0 // calc 7
-								&gpio 17 0 // calc 8
-								&gpio 27 0 // calc 9
-								&gpio 22 0 // calc 10
-								&gpio 25 0 // calc 11
-								&gpio 14 0 >; // calc 12
+					col-gpios = <&gpio 16 0 // calc 5
+								&gpio 5 0 // calc 6
+								&gpio 6 0 // calc 7
+								&gpio 13 0 // calc 8
+								&gpio 9 0 // calc 9
+								&gpio 10 0 // calc 10
+								&gpio 20 0 // calc 11
+								&gpio 11 0 >; // calc 12
 	
 					linux,keymap = <//first row
 							0x00000038 // left alt 	
