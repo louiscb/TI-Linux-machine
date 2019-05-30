@@ -28,18 +28,18 @@ GPIO4 - led
 CalcX means the wire number on the wires coming out of the calculator keyboard. Going from 1 to 18 looking from the backside of the calculator. We use the last 14 wires as the first four are reserved for the on button which is no longer used.
 
 ```
-GPIO2 - calc5
-GPIO3 - calc6
-GPIO5 - calc7
-GPIO6 - calc8
+GPIO16 - calc5
+GPIO5 - calc6
+GPIO6 - calc7
+GPIO13 - calc8
 GPIO9 - calc9
 GPIO10 - calc10
-GPIO11 - calc11
-GPIO13 - calc12
-GPIO15 - calc13
+GPIO20 - calc11
+GPIO11 - calc12
+GPIO19 - calc13
 GPIO16 - calc14
-GPIO19 - calc15
-GPIO20 - calc16
-GPIO26 - calc17
-GPIO27 - calc18
+GPIO27 - calc15
+GPIO26 - calc16
+GPIO3 - calc17
+GPIO2 - calc18
 ```
