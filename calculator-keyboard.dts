@@ -17,9 +17,9 @@
 					wakeup-source = <1>;
 	
 					row-gpios =	<&gpio 19 0 // calc 13 
-							&gpio 16 0 // calc 14   
-	                            			&gpio 27 0 // calc 15  
-	                            			&gpio 26 0 // calc 16
+							&gpio 27 0 // calc 14   
+	                            			&gpio 26 0 // calc 15  
+	                            			&gpio 15 0 // calc 16
 							&gpio 3 0 // calc 17   
 	                            			&gpio 2 0 >; // calc 18 
 					
@@ -33,7 +33,7 @@
 								&gpio 11 0 >; // calc 12
 	
 					linux,keymap = <//first row
-							0x00000038 // left alt 	
+							0x00000038 // left alt 
 							0x0100000B // number 0
 							0x02000034 // full stop
 							0x03000039 // space
@@ -94,7 +94,7 @@
 			target = <&gpio>;
 			__overlay__ {
 				keypad_pins: keypad_pins {
-					brcm,pins = < 2 3 5 6 9 10 11 13 16 19 20 26 27 >;
+					brcm,pins = < 2 3 5 6 9 10 11 13 15 16 19 20 26 27 >;
 					brcm,function = <0>;
 					brcm,pull = <1>;
 				};
